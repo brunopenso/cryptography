@@ -32,7 +32,7 @@ function encrypt(givenText) {
 }
 
 function decrypt(givenText) {
-    return givenText
+    return encrypt(givenText)
 }
 
 const text = 'meet at midnight'
@@ -43,4 +43,4 @@ const encrypted = encrypt(text)
 
 console.log('Encrypted text :', encrypted)
 
-console.log('Descrypted text:', decrypt(encrypted))
+console.log('Descrypted text:', encrypt(encrypted))
