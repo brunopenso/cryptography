@@ -22,7 +22,7 @@ function alphabetPosition (charToFind, array = alphabetString) {
 
 
 module.exports = {
-    default: getAlphabet(),
+    defaultAlphabet: getAlphabet(),
     getAlphabet,
     shiftAlphabet,
     alphabetPosition

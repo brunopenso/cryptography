@@ -1,4 +1,4 @@
-const alphabet = require('./alphabet')
+const util = require('./util')
 
 function encrypt(givenText) {
     let textToEncrypt = ''
@@ -6,7 +6,7 @@ function encrypt(givenText) {
     const textToWork = givenText.toLocaleLowerCase()
     for (let i = 0; i < textToWork.length; i++) {
         const char = textToWork.charAt(i)
-        if (alphabet.default.indexOf(char) >= 0) {
+        if (util.defaultAlphabet.indexOf(char) >= 0) {
             textToEncrypt += char
         }
     }

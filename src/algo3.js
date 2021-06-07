@@ -1,6 +1,6 @@
-const alphabet = require('./alphabet')
+const util = require('./util')
 
-const cipher = alphabet.shiftAlphabet(3)
+const cipher = util.shiftAlphabet(3)
 
 function encrypt(givenText) {
     let text = ''
@@ -8,7 +8,7 @@ function encrypt(givenText) {
         if (char === ' ') {
             text += char
         } else {
-            const position = alphabet.alphabetPosition(char)
+            const position = util.alphabetPosition(char)
             text += cipher[position]
         }
     }
@@ -22,8 +22,8 @@ function decrypt(givenText) {
         if (char === ' ') {
             text += char
         } else {
-            const position = alphabet.alphabetPosition(char, cipher)
-            text += alphabet.default[position]
+            const position = util.alphabetPosition(char, cipher)
+            text += util.defaultAlphabet[position]
         }
     }
 

@@ -1,4 +1,3 @@
-const { expect } = require('@jest/globals')
 const { encrypt, decrypt } = require('../src/algo3')
 
 test('run', async function() {
