@@ -11,7 +11,16 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/algo1.js"
+            "program": "${workspaceFolder}/src/algo1.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Algo 3",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/algo3.js"
         }
     ]
 }

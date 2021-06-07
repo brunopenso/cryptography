@@ -1,9 +1,36 @@
-const alphabet = require('./alphabet').alphabetString
+const alphabet = require('./alphabet')
 
-function shiftAlphabet(qtdy) {
-    const part1 = alphabet.substr(0, qtdy)
-    const part2 = alphabet.substr(qtdy, alphabet.length)
-    return part2+part1
+const cipher = alphabet.shiftAlphabet(3)
+
+function encrypt(givenText) {
+    let text = ''
+    for(const char of givenText) {
+        if (char === ' ') {
+            text += char
+        } else {
+            const position = alphabet.alphabetPosition(char)
+            text += cipher[position]
+        }
+    }
+
+    return text
 }
 
-console.log(shiftAlphabet(3))
+function decrypt(givenText) {
+    let text = ''
+    for(const char of givenText) {
+        if (char === ' ') {
+            text += char
+        } else {
+            const position = alphabet.alphabetPosition(char, cipher)
+            text += alphabet.default[position]
+        }
+    }
+
+    return text
+}
+
+module.exports = {
+    encrypt,
+    decrypt
+}
