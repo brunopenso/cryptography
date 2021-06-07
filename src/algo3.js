@@ -1,8 +1,8 @@
 const util = require('./util')
 
-const cipher = util.shiftAlphabet(3)
+const cipherShift3 = util.shiftAlphabet(3)
 
-function encrypt(givenText) {
+function encrypt(givenText, cipher = cipherShift3) {
     let text = ''
     for(const char of givenText) {
         if (char === ' ') {
@@ -16,7 +16,7 @@ function encrypt(givenText) {
     return text
 }
 
-function decrypt(givenText) {
+function decrypt(givenText, cipher = cipherShift3) {
     let text = ''
     for(const char of givenText) {
         const position = util.alphabetPosition(char, cipher)

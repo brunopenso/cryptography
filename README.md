@@ -28,3 +28,8 @@ See `algo2.js`
 Change letters of the text considering a shift on the alphabet. ex: abcd > cdab
 
 See `algo3.js`
+
+### Caesar cipher - with keyphrase
+The same as above but with keyphrase(keyword) removing all spaces and duplicate letters adding the rest of the alphabet in the order unless the letters of the keyphrase
+
+See `algo4.js`
