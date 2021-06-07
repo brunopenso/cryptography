@@ -23,3 +23,8 @@ See `algo1.js`
 Change each letter of the text considering the alphabet splited in half and randomly arranged between the sender and receiver
 
 See `algo2.js`
+
+### Caesar cipher
+Change letters of the text considering a shift on the alphabet. ex: abcd > cdab
+
+See `algo3.js`
