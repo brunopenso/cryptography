@@ -20,10 +20,24 @@ function alphabetPosition (charToFind, array = alphabetString) {
     return undefined
 }
 
+/**
+ * Remove all spaces and duplicated letters
+ * @param {string} phrase 
+ */
+function prepareKeyphrase (phrase) {
+    let text = phrase.split(' ').join('')
+    const array = [...new Set(text.split(''))]
+    text = ''
+    for (const char of array) {
+        text += char
+    }
+    return text
+}
 
 module.exports = {
     defaultAlphabet: getAlphabet(),
     getAlphabet,
     shiftAlphabet,
-    alphabetPosition
+    alphabetPosition,
+    prepareKeyphrase
 }
