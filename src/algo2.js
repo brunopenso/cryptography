@@ -14,7 +14,7 @@ function hasChar(array, charToFind) {
     return undefined
 }
 
-function encrypt(givenText) {
+function crypt(givenText) {
     let text = ''
     for (const char of givenText) {
         const char1 = hasChar(alphabet1, char)
@@ -31,11 +31,6 @@ function encrypt(givenText) {
     return text
 }
 
-function decrypt(givenText) {
-    return encrypt(givenText)
-}
-
 module.exports = {
-    encrypt,
-    decrypt
+    crypt
 }
