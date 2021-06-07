@@ -53,14 +53,7 @@ function decrypt(givenText) {
     return text
 }
 
-const myText = 'Thy secret is thy prisoner: if thou let it go, thou art a prisoner to it'
-
-console.log('Text to encrypt:', myText)
-
-const result = encrypt(myText)
-
-console.log('Encrypted text:', result)
-
-const result1 = decrypt(result)
-
-console.log('Decrypted message:', result1)
+module.exports = {
+    encrypt,
+    decrypt
+}

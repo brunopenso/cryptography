@@ -1,0 +1,25 @@
+{
+  "name": "cryptography",
+  "version": "1.0.0",
+  "description": "This repo is part of my study of Cryptography.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunopenso/cryptography.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunopenso/cryptography/issues"
+  },
+  "homepage": "https://github.com/brunopenso/cryptography#readme",
+  "devDependencies": {
+    "jest": "^27.0.4"
+  }
+}

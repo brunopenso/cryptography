@@ -35,12 +35,7 @@ function decrypt(givenText) {
     return encrypt(givenText)
 }
 
-const text = 'meet at midnight'
-
-console.log('Text to encrypt:', text)
-
-const encrypted = encrypt(text)
-
-console.log('Encrypted text :', encrypted)
-
-console.log('Descrypted text:', encrypt(encrypted))
+module.exports = {
+    encrypt,
+    decrypt
+}
