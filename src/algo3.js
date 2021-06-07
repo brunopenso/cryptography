@@ -19,10 +19,10 @@ function encrypt(givenText) {
 function decrypt(givenText) {
     let text = ''
     for(const char of givenText) {
-        if (char === ' ') {
+        const position = util.alphabetPosition(char, cipher)
+        if (position === undefined) {
             text += char
         } else {
-            const position = util.alphabetPosition(char, cipher)
             text += util.defaultAlphabet[position]
         }
     }
