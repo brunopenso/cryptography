@@ -11,7 +11,7 @@ test('run', async function(){
     console.log('Encrypted text :', encrypted)
     expect(encrypted).toBe('cuuz vz cgxsgibz')
 
-    const decrypted = encrypt(encrypted)
+    const decrypted = decrypt(encrypted)
     console.log('Descrypted text:', decrypted)
     expect(decrypted).toBe(text)
 })
