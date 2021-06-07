@@ -21,6 +21,6 @@ test('alphabetPosition', async function() {
 })
 
 test('prepareKeyphrase', async function() {
-    expect(util.prepareKeyphrase('JULIUS CAESAR')).toBe('JULISCAER')
-    expect(util.prepareKeyphrase('TTTT')).toBe('T')
+    expect(util.prepareKeyphrase('JULIUS CAESAR')).toBe('juliscaer')
+    expect(util.prepareKeyphrase('TTTT')).toBe('t')
 })

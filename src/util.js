@@ -42,7 +42,7 @@ function alphabetPosition (charToFind, array = alphabetString) {
  * @param {string} phrase 
  */
 function prepareKeyphrase (phrase) {
-    let text = phrase.split(' ').join('')
+    let text = phrase.toLowerCase().split(' ').join('')
     const array = [...new Set(text.split(''))]
     text = ''
     for (const char of array) {
