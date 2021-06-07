@@ -7,7 +7,7 @@ I'm reading the book The Code Book: The Science of Secrecy from Ancient Egypt to
 ## Transposition
 *How it works:* 
 - The letters of the message are simply rearranged
-- Receiver and Sender must agree how to do it first
+- Each letter retains its identity but changes its position
 
 ### Rail Fence Algorithm
 Written with alternate letters on separate upper and lower lines and clue them together
@@ -15,4 +15,11 @@ Written with alternate letters on separate upper and lower lines and clue them t
 See `algo1.js`
 
 ## Substitution
-*How it works:* ?
+*How it works:*
+- The letters of the message are changed following some rule
+- Each letter changes its identity but retains its position
+
+### Pair letters
+Change each letter of the text considering the alphabet splited in half and randomly arranged between the sender and receiver
+
+See `algo2.js`
