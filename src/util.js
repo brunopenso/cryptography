@@ -1,16 +1,33 @@
 const alphabetString = 'abcdefghijklmnopqrstuvwxyz'
 
+/**
+ * Return the alphabet between the chars
+ * @param {char} c1 
+ * @param {char} c2 
+ * @returns alphabet array
+ */
 function getAlphabet(c1 = 'a', c2 = 'z') {
     a = alphabetString.split('');
     return (a.slice(a.indexOf(c1), a.indexOf(c2) + 1)); 
 }
 
+/**
+ * Shift the alphabet to the right
+ * @param {integer} qtdy 
+ * @returns the entire alphabet shifted
+ */
 function shiftAlphabet(qtdy) {
     const part1 = alphabetString.substr(0, qtdy)
     const part2 = alphabetString.substr(qtdy, alphabetString.length)
     return part2+part1
 }
 
+/**
+ * Discovery a char position in an array
+ * @param {char} charToFind 
+ * @param {array} array 
+ * @returns position or undefined
+ */
 function alphabetPosition (charToFind, array = alphabetString) {
     for(let i = 0; i < array.length; i++) {
         if (array[i] === charToFind) {
