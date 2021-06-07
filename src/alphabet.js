@@ -10,8 +10,20 @@ function shiftAlphabet(qtdy) {
     const part2 = alphabetString.substr(qtdy, alphabetString.length)
     return part2+part1
 }
+
+function alphabetPosition (charToFind, array = alphabetString) {
+    for(let i = 0; i < array.length; i++) {
+        if (array[i] === charToFind) {
+            return i
+        }
+    }
+    return undefined
+}
+
+
 module.exports = {
     default: getAlphabet(),
     getAlphabet,
     shiftAlphabet,
+    alphabetPosition
 }
