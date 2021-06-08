@@ -4,6 +4,15 @@ This repo is part of my study of Cryptography.
 
 I'm reading the book The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography (English Edition) and the book tells the history of the cryptography and I will implement some algos to test how this is done.
 
+## Science of secret writing and its main branches
+
+- Steganography (hidden)
+- Cryptography (scrambled)
+  - Substitution
+    - Code (replace words)
+    - Cipher (replace letters)
+  - Transposition
+
 ## Transposition
 *How it works:* 
 - The letters of the message are simply rearranged
