@@ -1,4 +1,3 @@
-const { expect } = require('@jest/globals')
 const { getCypherAlphabet, encrypt, decrypt} = require('../src/algo4')
 
 test('test shift alphabet', async function () {
