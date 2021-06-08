@@ -30,6 +30,9 @@ See `algo1.js`
 - The letters of the message are changed following some rule
 - Each letter changes its identity but retains its position
 
+Extra information:
+- When the algorithm use only one cypher alphabet per message it means that is a *monoalphabetic substitution*
+
 ### Pair letters
 Change each letter of the text considering the alphabet splited in half and randomly arranged between the sender and receiver
 
@@ -49,3 +52,5 @@ See `algo4.js`
 Is a matrix of the alphabet shift 26 times one after the other. After that a keyphrase is informed to select each row of that matrix that will be used to replace each letter of the text that will be encrypted
 
 See `algo5.js`
+
+Extra: Use more than one cypher alphabet
