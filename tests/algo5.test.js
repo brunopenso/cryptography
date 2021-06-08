@@ -1,5 +1,4 @@
-const { test, expect } = require('@jest/globals')
-const { createMatrix, calculateKeyphrase } = require('../src/algo5')
+const { createMatrix, calculateKeyphrase, encrypt } = require('../src/algo5')
 
 test('matrix validation', async function() {
     const matrix = createMatrix()
@@ -44,4 +43,13 @@ test('calculateKeyphrase', async function() {
 
     result = calculateKeyphrase(13)
     expect(result).toBe('whitewhitewhi')
+})
+
+test('run', async function () {
+    const myText = 'divert troops to east ridge'
+    console.log('Text: ', myText)
+
+    const encrypted = encrypt(myText)
+    console.log('Encrypted: ', encrypted)
+    expect(encrypted).toBe('zpdxvpazhslzbhiwzbkmznm')
 })

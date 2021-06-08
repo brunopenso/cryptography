@@ -26,25 +26,31 @@ function calculateKeyphrase (textLength, keyphrase = keyphraseLocal) {
     return keyphrasePrepared
 }
 
-
 function encrypt (givenText, keyphrase = keyphraseLocal) {
     const textToEncrypt = givenText.split(' ').join('')
-    let keyphrasePrepared = ''
+    const keyphrasePrepared = calculateKeyphrase(textToEncrypt.length, keyphrase)
 
-    let index = 0
-    for (const char of textToEncrypt) {
-        if (keyphrase[index] === '' || keyphrase[index] === undefined) {
-            index = 0
-        }
-        keyphrasePrepared += keyphrase[index]
-        index++
+    if (textToEncrypt.length !== keyphrasePrepared.length) {
+        throw new Error('Some error occured when calculating the keyphrase size')
     }
-    return keyphrasePrepared
+
+    let encryptedText = ''
+    const matrix = createMatrix()
+    for (let i = 0; i < textToEncrypt.length; i++) {
+        const char = textToEncrypt[i]
+        const charKeyphrase = keyphrasePrepared[i]
+        const alphabetPosition = util.alphabetPosition(charKeyphrase)
+        const charPosition = util.alphabetPosition(char)
+
+        const replacedChar = matrix[alphabetPosition][charPosition]
+        encryptedText += replacedChar
+    }
+
+    return encryptedText
 }
 
-const myText = 'divert troops to east ridge'
-console.log(encrypt(myText))
 module.exports = {
     createMatrix,
-    calculateKeyphrase
+    calculateKeyphrase,
+    encrypt
 }
