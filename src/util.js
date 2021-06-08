@@ -51,10 +51,31 @@ function prepareKeyphrase (phrase) {
     return text
 }
 
+/**
+ * Count the frequency that a letter appear on a text
+ * @param {string} text 
+ */
+function frequencyAnalysis (text) {
+    const map = new Map()
+    for(const char of text.toLocaleLowerCase()) {
+        if(map.has(char)) {
+            map.set(char, map.get(char)+1)
+        } else {
+            map.set(char, 1)
+        }
+    }
+    for(const entry of map.entries()) {
+        const percentage = (map.get(entry[0]) / text.length)*100
+        map.set(entry[0], Math.round(percentage *100) / 100)
+    }
+    return map
+}
+
 module.exports = {
     defaultAlphabet: getAlphabet(),
     getAlphabet,
     shiftAlphabet,
     alphabetPosition,
-    prepareKeyphrase
+    prepareKeyphrase,
+    frequencyAnalysis
 }
