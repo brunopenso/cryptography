@@ -2,9 +2,11 @@
 
 This repo is part of my study of Cryptography.
 
-I'm reading the book The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography (English Edition) and the book tells the history of the cryptography and I will implement some algos to test how this is done.
+I'm reading the book The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography (English Edition) written by Simon Singh.
 
-## Science of secret writing and its main branches
+The book tells the history of the cryptography and I will implement some algorithms(algo for now one) to test how this is done.
+
+## Science of secret writing and its main branches (types)
 
 - Steganography (hidden)
 - Cryptography (scrambled)
