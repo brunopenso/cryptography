@@ -31,7 +31,7 @@ See `algo1.js`
 - Each letter changes its identity but retains its position
 
 Extra information:
-- When the algorithm use only one cypher alphabet per message it means that is a *monoalphabetic substitution*
+- When the algorithm use only one cypher alphabet per message it means that is a *monoalphabetic substitution*. When using more than on alphabet is called *polyalphabetic*
 
 ### Pair letters
 Change each letter of the text considering the alphabet splited in half and randomly arranged between the sender and receiver
