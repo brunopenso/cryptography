@@ -1,4 +1,5 @@
-const { createMatrix } = require('../src/algo5')
+const { test, expect } = require('@jest/globals')
+const { createMatrix, calculateKeyphrase } = require('../src/algo5')
 
 test('matrix validation', async function() {
     const matrix = createMatrix()
@@ -29,4 +30,18 @@ test('matrix validation', async function() {
     expect(matrix[24][0]).toBe('y')
     expect(matrix[25][0]).toBe('z')
     expect(matrix[26][0]).toBe('a')
+})
+
+test('calculateKeyphrase', async function() {
+    let result = calculateKeyphrase(5)
+    expect(result).toBe('white')
+
+    result = calculateKeyphrase(7)
+    expect(result).toBe('whitewh')
+
+    result = calculateKeyphrase(10)
+    expect(result).toBe('whitewhite')
+
+    result = calculateKeyphrase(13)
+    expect(result).toBe('whitewhitewhi')
 })
