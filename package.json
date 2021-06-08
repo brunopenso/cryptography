@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest --runInBand",
+    "test": "jest --runInBand  --coverage",
     "test:custom": "jest --runInBand tests/algo5.test.js"
   },
   "repository": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/brunopenso/cryptography#readme",
   "devDependencies": {
+    "coveralls": "^3.1.0",
     "jest": "^27.0.4"
   }
 }
