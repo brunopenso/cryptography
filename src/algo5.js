@@ -49,8 +49,34 @@ function encrypt (givenText, keyphrase = keyphraseLocal) {
     return encryptedText
 }
 
+function decrypt (givenText, keyphrase = keyphraseLocal) {
+    const textToDecrypt = givenText
+    const keyphrasePrepared = calculateKeyphrase(textToDecrypt.length, keyphrase)
+
+    if (textToDecrypt.length !== keyphrasePrepared.length) {
+        throw new Error('Some error occured when calculating the keyphrase size')
+    }
+
+    let decryptedText = ''
+    const matrix = createMatrix()
+    for (let i = 0; i < textToDecrypt.length; i++) {
+        const char = textToDecrypt[i]
+        const charKeyphrase = keyphrasePrepared[i]
+        const alphabetPosition = util.alphabetPosition(charKeyphrase)
+        const charPosition = util.alphabetPosition(char, matrix[alphabetPosition])
+
+        const replacedChar =util.defaultAlphabet[charPosition]
+        decryptedText += replacedChar
+    }
+
+    return decryptedText
+}
+
+console.log(decrypt('zpdxvpazhslzbhiwzbkmznm'))
+
 module.exports = {
     createMatrix,
     calculateKeyphrase,
-    encrypt
+    encrypt,
+    decrypt
 }

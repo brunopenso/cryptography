@@ -1,4 +1,4 @@
-const { createMatrix, calculateKeyphrase, encrypt } = require('../src/algo5')
+const { createMatrix, calculateKeyphrase, encrypt, decrypt } = require('../src/algo5')
 
 test('matrix validation', async function() {
     const matrix = createMatrix()
@@ -52,4 +52,8 @@ test('run', async function () {
     const encrypted = encrypt(myText)
     console.log('Encrypted: ', encrypted)
     expect(encrypted).toBe('zpdxvpazhslzbhiwzbkmznm')
+
+    const decrypted = decrypt(encrypted)
+    console.log('Decrypted: ', decrypted)
+    expect(decrypted).toBe('diverttroopstoeastridge')
 })
