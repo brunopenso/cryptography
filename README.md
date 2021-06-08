@@ -42,3 +42,8 @@ See `algo3.js`
 The same as above but with keyphrase(keyword) removing all spaces and duplicate letters adding the rest of the alphabet in the order unless the letters of the keyphrase
 
 See `algo4.js`
+
+### Vigenère Square
+Is a matrix of the alphabet shift 26 times one after the other. After that a keyphrase is informed to select each row of that matrix that will be used to replace each letter of the text that will be encrypted
+
+See `algo5.js`
